@@ -84,12 +84,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // CHEAT/TESTING: Tekan tombol 'K' di keyboard untuk pura-pura kena hit musuh
-    void OnGUI()
-    {
-        GUI.Box(new Rect(10, 10, 250, 40), "Tekan 'K' untuk Simulasi Kena Hit");
-        if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.K)
-        {
-            TakeDamage();
-        }
-    }
+    // void OnGUI()
+    // {
+    //     GUI.Box(new Rect(10, 10, 250, 40), "Tekan 'K' untuk Simulasi Kena Hit");
+    //     if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.K)
+    //     {
+    //         TakeDamage();
+    //     }
+    // }
 }
