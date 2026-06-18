@@ -1,20 +1,24 @@
 using UnityEngine;
-using System.Collections.Generic; // Dibutuhkan jika ada error koleksi data
-using UnityEngine.SceneManagement; // Penting untuk me-restart level otomatis
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Son Cooldown Settings")]
     public float sonCooldownDuration = 5f; // Durasi ayam kabur (detik)
-    private float cooldownTimer = 0f;
-    private bool isCooldownActive = false;
+    public float cooldownTimer = 0f;
+    public bool isCooldownActive = false;
 
     private PlayerMovement playerMovement;
 
     void Start()
     {
-        // Mengambil referensi dari script PlayerMovement yang satu objek dengan script ini
         playerMovement = GetComponent<PlayerMovement>();
+        
+        // PASTIKAN pas game mulai, Baron otomatis naik ayam sesuai GDD
+        if (playerMovement != null)
+        {
+            playerMovement.SetMovementState(true);
+        }
     }
 
     void Update()
@@ -30,26 +34,26 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Fungsi utama yang bakal dipanggil kalau Baron terkena serangan musuh
+    // Fungsi utama saat Baron ditabrak musuh
     public void TakeDamage()
     {
         // KONDISI 1: Jika sedang naik ayam (Mounted)
-        if (playerMovement.isMounted)
+        if (playerMovement.isMounted && !isCooldownActive)
         {
             Debug.Log("EVENT: Lunch Break Over! Son terkena hit dan kabur!");
             
-            // Turunkan Baron dari ayam (Ubah state pergerakan jadi lambat & kesat)
+            // Turunkan Baron dari ayam (Ubah pergerakan jadi lambat & kesat)
             playerMovement.SetMovementState(false);
             
             // Mulai masa cooldown ayam
             StartSonCooldown();
         }
-        // KONDISI 2: Jika sedang jalan kaki (Dismounted) dan kena hit
-        else
+        // KONDISI 2: Jika sedang jalan kaki (Dismounted) dan cooldown masih berjalan
+        else if (!playerMovement.isMounted && isCooldownActive)
         {
-            if (isCooldownActive)
+            // Sumpah ini pelindung biar ga double-hit instan dalam 1 frame semenjak ayam kabur
+            if (cooldownTimer < (sonCooldownDuration - 0.5f)) 
             {
-                // Jika Son masih cooldown, berarti Baron murni jalan kaki -> Mati!
                 TriggerPlayerDeath();
             }
         }
@@ -59,9 +63,6 @@ public class PlayerHealth : MonoBehaviour
     {
         isCooldownActive = true;
         cooldownTimer = sonCooldownDuration;
-        Debug.Log("Son Cooldown Dimulai selama: " + sonCooldownDuration + " detik.");
-        
-        // TODO: Nanti di sini tempat lu mainin sound effect ayam panik / musik berubah pelan
     }
 
     void EndSonCooldown()
@@ -76,20 +77,8 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("EVENT: FIRED! Baron mati terkena hit saat jalan kaki!");
         
-        // TODO: Nanti pasang efek layar kaca pecah atau rontok jadi gir di sini
-
-        // Mengulang lantai/level saat ini secara instan sesuai GDD agar fast-paced
+        // Mengulang level secara instan
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
-
-    // CHEAT/TESTING: Tekan tombol 'K' di keyboard untuk pura-pura kena hit musuh
-    // void OnGUI()
-    // {
-    //     GUI.Box(new Rect(10, 10, 250, 40), "Tekan 'K' untuk Simulasi Kena Hit");
-    //     if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.K)
-    //     {
-    //         TakeDamage();
-    //     }
-    // }
 }

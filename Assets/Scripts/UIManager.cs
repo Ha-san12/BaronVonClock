@@ -1,36 +1,56 @@
 using UnityEngine;
-using UnityEngine.UI; // Penting untuk mengontrol komponen Image UI
-using TMPro;        // Penting untuk mengontrol TextMeshPro
+using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     [Header("UI Element References")]
-    public Image weaponSharpnessBar; // Tarik objek UI_WeaponSharpness ke sini
-    public TextMeshProUGUI orbText;   // Tarik objek Text_Orbs ke sini
+    public Image weaponSharpnessBar;
+    public Image sonMeterImage;       // Objek UI_SonMeter
+    public TextMeshProUGUI orbText;
 
     [Header("Player Script References")]
     private PlayerAttack playerAttack;
+    private PlayerHealth playerHealth; // Ganti dari PlayerMovement ke PlayerHealth
 
     void Start()
     {
-        // Mencari script PlayerAttack yang menempel di objek Player_Baron
         GameObject player = GameObject.Find("Player_Baron");
         if (player != null)
         {
             playerAttack = player.GetComponent<PlayerAttack>();
+            playerHealth = player.GetComponent<PlayerHealth>(); // Ambil script health
         }
     }
 
     void Update()
     {
-        if (playerAttack == null) return;
+        if (playerAttack == null || playerHealth == null) return;
 
-        // 1. Update Bar Ketajaman Senjata (Mengubah nilai 0-100% menjadi nilai Slider 0.0 - 1.0)
+        // 1. Update Bar Ketajaman Senjata
         float sharpnessPercentage = playerAttack.currentSharpness / playerAttack.maxSharpness;
         weaponSharpnessBar.fillAmount = sharpnessPercentage;
 
-        // 2. Update Teks Jumlah Memory Orbs (Format: "JumlahSekarang/7")
-        // Angka 7 kita hardcode dulu sementara sesuai wireframe Hanif
+        // 2. Update Teks Jumlah Memory Orbs
         orbText.text = playerAttack.currentMemoryOrbs.ToString() + "/7";
+
+        // 3. LOGIKA INDIKATOR SON METER (AYAM)
+        // Jika ayam SIAP / AKTIF (tidak sedang dalam masa cooldown)
+        if (!playerHealth.isCooldownActive)
+        {
+            sonMeterImage.fillAmount = 1f; // Lingkaran penuh
+            sonMeterImage.color = Color.white; // Warna menyala/terang (Ayam aktif)
+        }
+        // Jika ayam KABUR (sedang dalam masa cooldown)
+        else
+        {
+            // Ubah warna ikon jadi abu-abu meredup tanda ayam lagi kabur
+            sonMeterImage.color = new Color(0.3f, 0.3f, 0.3f, 0.6f); 
+
+            // Hitung persentase durasi cooldown yang sudah berjalan (0.0 sampai 1.0)
+            // Mengisi lingkaran memutar seiring timer cooldown mendekati selesai
+            float cooldownPercentage = (playerHealth.sonCooldownDuration - playerHealth.cooldownTimer) / playerHealth.sonCooldownDuration;
+            sonMeterImage.fillAmount = cooldownPercentage;
+        }
     }
 }
