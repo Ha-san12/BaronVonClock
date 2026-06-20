@@ -1,30 +1,41 @@
 using UnityEngine;
+using System.Collections; 
 
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Weapon Stats")]
     public float maxSharpness = 100f;
     public float currentSharpness = 100f;
-    public float sharpnessLossPerHit = 20f; // 5 kali pukul langsung tumpul
-    public int sharpenOrbCost = 2;          // Biaya Memory Orb untuk menajamkan pedang
+    public float sharpnessLossPerHit = 20f; 
+    public int sharpenOrbCost = 2;          
 
     [Header("Attack Settings")]
-    public float attackRange = 1.2f;        // Jarak jangkauan pukulan pedang
-    public Transform attackPoint;           // Titik pusat serangan (di depan karakter)
-    public LayerMask enemyLayer;            // Layer khusus untuk musuh
+    public float attackRange = 1.2f;        
+    public Transform attackPoint;           
+    public LayerMask enemyLayer;            
 
     [Header("Inventory Data")]
-    public int currentMemoryOrbs = 5;       // Data sementara jumlah Orb player (buat tes)
+    public int currentMemoryOrbs = 5;       
+
+    [Header("Sharpening Settings")]
+    public float sharpenDuration = 4f;      
+    private bool isSharpening = false;      
+    private PlayerMovement playerMovement;  
+
+    void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     void Update()
     {
-        // 1. Klik Kiri Mouse untuk Menyerang
+        if (isSharpening) return;
+
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
         }
 
-        // 2. Tekan Tombol R untuk Menajamkan Senjata (Sharpening)
         if (Input.GetKeyDown(KeyCode.R))
         {
             TrySharpenWeapon();
@@ -33,47 +44,48 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        // Jika ketajaman habis (0), damage jadi 0 alias ga bisa bunuh musuh
         if (currentSharpness <= 0f)
         {
             Debug.Log("Senjata Tumpul! Damage 0. Tekan 'R' untuk menajamkan kembali!");
-            // TODO: Mainkan sound effect sedih / sad trombone di sini
             return;
         }
 
-        Debug.Log("Baron mengayunkan pedang!");
+        Debug.Log("Karakter mengayunkan pedang!");
 
-        // Kurangi ketajaman senjata setiap kali mengayun/memukul
-        currentSharpness -= sharpnessLossPerHit;
-        currentSharpness = Mathf.Clamp(currentSharpness, 0f, maxSharpness);
-        Debug.Log("Ketajaman Senjata Sisa: " + currentSharpness + "%");
-
-        // Deteksi musuh yang berada di dalam area lingkaran serangan
+        // 1. Deteksi dulu apakah ada musuh di dalam area serangan
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
+        // 2. KONDISI BARU: Kurangi ketajaman HANYA jika array hitEnemies ada isinya (mengenai musuh)
+        if (hitEnemies.Length > 0)
+        {
+            currentSharpness -= sharpnessLossPerHit;
+            currentSharpness = Mathf.Clamp(currentSharpness, 0f, maxSharpness);
+            Debug.Log("Tebasan mengenai target! Ketajaman Senjata Sisa: " + currentSharpness + "%");
+        }
+        else
+        {
+            Debug.Log("Ayunan meleset ke udara. Ketajaman tetap aman!");
+        }
+
+        // 3. Hancurkan musuh yang terkena tebasan
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Musuh terkena hit pedang plastik Baron!");
-            // Hancurkan musuh secara instan sesuai sistem One-Hit Kill di GDD
+            Debug.Log("Musuh hancur terkena serangan!");
             Destroy(enemy.gameObject); 
         }
     }
 
     void TrySharpenWeapon()
     {
-        // Cek apakah ketajaman sudah penuh atau belum
         if (currentSharpness >= maxSharpness)
         {
             Debug.Log("Senjata masih tajam, tidak perlu di-sharpen!");
             return;
         }
 
-        // Cek kecukupan Memory Orbs player
         if (currentMemoryOrbs >= sharpenOrbCost)
         {
-            currentMemoryOrbs -= sharpenOrbCost;
-            currentSharpness = maxSharpness;
-            Debug.Log("Sharpening Berhasil! Sisa Orb: " + currentMemoryOrbs + " | Ketajaman: 100%");
+            StartCoroutine(SharpenRoutine());
         }
         else
         {
@@ -81,7 +93,24 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    // Gambar visual jangkauan attack di Unity Editor agar gampang diatur sudutnya
+    IEnumerator SharpenRoutine()
+    {
+        Debug.Log("Mulai sharpening... Karakter stuck selama " + sharpenDuration + " detik.");
+        
+        isSharpening = true;
+        if (playerMovement != null) playerMovement.isSharpening = true;
+
+        currentMemoryOrbs -= sharpenOrbCost;
+
+        yield return new WaitForSeconds(sharpenDuration);
+
+        currentSharpness = maxSharpness;
+        isSharpening = false;
+        if (playerMovement != null) playerMovement.isSharpening = false;
+
+        Debug.Log("Sharpening Selesai! Karakter bisa jalan lagi. Ketajaman: 100%");
+    }
+
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
