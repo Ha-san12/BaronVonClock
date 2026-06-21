@@ -3,9 +3,23 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [Header("AI Settings")]
-    public float moveSpeed = 3.5f;       // Kecepatan lari musuh
-    public float detectionRange = 6f;   // Jarak pandang musuh untuk deteksi player
-    public float attackRange = 0.8f;     // Jarak dekat banget untuk bisa mukul player
+    public float moveSpeed = 3.5f;       
+    public float detectionRange = 6f;   
+    public float attackRange = 0.8f;     
+
+    [Header("Field of View & Line of Sight")]
+    public bool useFOV = true;          
+    public float fieldOfView = 90f;     
+    public LayerMask obstacleLayer;     
+    public bool showFOVVisuals = true;  
+
+    [Header("Patrol Settings (Jalan-jalan Santai)")]
+    public bool canPatrol = true;       
+    public float patrolSpeed = 1.5f;    
+    public float changeDirectionTime = 3f; 
+    
+    private float patrolTimer;
+    private Vector2 patrolDirection;
 
     private Transform playerTransform;
     private PlayerHealth playerHealth;
@@ -13,7 +27,6 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        // Otomatis mencari objek bernama "Player_Baron" di dalam game
         GameObject player = GameObject.Find("Player_Baron");
         
         if (player != null)
@@ -27,69 +40,153 @@ public class EnemyAI : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f; // Biar musuh ga jatuh ke bawah karena ini game top-down
-        rb.freezeRotation = true; // Biar musuh ga muter-muter pas nabrak dinding
+        rb.gravityScale = 0f; 
+        rb.freezeRotation = true; 
+
+        patrolTimer = changeDirectionTime;
+        PickNewPatrolDirection();
     }
 
     void FixedUpdate()
     {
         if (playerTransform == null) return;
 
-        // 1. Hitung jarak antara musuh dan Baron
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+        bool canSeePlayer = false;
 
-        // 2. LOGIKA AI: Jika Baron berada di dalam jarak deteksi
+        // 1. Cek jangkauan
         if (distanceToPlayer <= detectionRange)
         {
-            // Jika Baron sudah dekat banget, langsung serang/mukul
+            canSeePlayer = true;
+
+            // 2. Cek sudut pandang (FOV)
+            if (useFOV)
+            {
+                Vector2 enemyForward = transform.right; 
+                Vector2 dirToPlayer = ((Vector2)playerTransform.position - (Vector2)transform.position).normalized;
+                float angleToPlayer = Vector2.Angle(enemyForward, dirToPlayer);
+
+                if (angleToPlayer > fieldOfView / 2f)
+                {
+                    canSeePlayer = false; 
+                }
+            }
+
+            // 3. Cek halangan tembok (Line of Sight)
+            if (canSeePlayer)
+            {
+                RaycastHit2D hitInfo = Physics2D.Linecast(transform.position, playerTransform.position, obstacleLayer);
+                if (hitInfo.collider != null)
+                {
+                    canSeePlayer = false; 
+                }
+            }
+        }
+
+        if (canSeePlayer)
+        {
+            patrolTimer = 0f; 
+
             if (distanceToPlayer <= attackRange)
             {
                 AttackPlayer();
             }
-            // Jika masih agak jauh tapi ketahuan, kejar Baron!
             else
             {
                 ChasePlayer();
             }
         }
-        else
+        else 
         {
-            // Jika player ga kelihatan, bikin musuh diam (Nanti bisa ditambahin sistem patroli)
-            rb.linearVelocity = Vector2.zero;
+            if (canPatrol)
+            {
+                PatrolAround();
+            }
+            else
+            {
+                rb.linearVelocity = Vector2.zero; 
+            }
         }
     }
 
     void ChasePlayer()
     {
-        // Hitung arah menuju posisi Baron
         Vector2 direction = ((Vector2)playerTransform.position - (Vector2)transform.position).normalized;
-        
-        // Gerakkan Rigidbody musuh ke arah Baron
         rb.linearVelocity = direction * moveSpeed;
 
-        // OPSIONAL: Bikin musuh nengok ke arah player yang dikejar
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     void AttackPlayer()
     {
-        // Hentikan pergerakan saat memukul
         rb.linearVelocity = Vector2.zero;
-
         if (playerHealth != null)
         {
-            // Panggil fungsi TakeDamage yang udah kita buat di script PlayerHealth kemarin!
             playerHealth.TakeDamage();
         }
     }
 
-    // Fungsi pembantu buat nampilin radius deteksi di Unity Editor (Biar lu kelihatan lingkarannya)
-    void OnDrawGizmosSelected()
+    void PatrolAround()
+    {
+        patrolTimer -= Time.fixedDeltaTime;
+
+        if (patrolTimer <= 0f)
+        {
+            PickNewPatrolDirection();
+            patrolTimer = changeDirectionTime;
+        }
+
+        rb.linearVelocity = patrolDirection * patrolSpeed;
+
+        if (patrolDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(patrolDirection.y, patrolDirection.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 5f);
+        }
+    }
+
+    void PickNewPatrolDirection()
+    {
+        float randomAngle = Random.Range(0f, 360f);
+        patrolDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+    }
+
+    // --- BARU: Sistem Pantulan Tembok (Biar nggak nyangkut) ---
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Mengecek apakah objek yang ditabrak itu bagian dari Layer "Wall" (Obstacle Layer)
+        if (((1 << collision.gameObject.layer) & obstacleLayer) != 0)
+        {
+            // Ambil arah permukaan tembok yang ditabrak
+            Vector2 wallNormal = collision.contacts[0].normal;
+            
+            // Rumus "Reflect" bikin musuh putar balik arah menjauhi tembok (seperti pantulan cermin/biliar)
+            patrolDirection = Vector2.Reflect(patrolDirection, wallNormal).normalized;
+            
+            // Reset timer biar dia nggak buru-buru ganti arah lagi
+            patrolTimer = changeDirectionTime;
+        }
+    }
+
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        if (useFOV && showFOVVisuals)
+        {
+            Gizmos.color = Color.cyan;
+            Vector3 forward = transform.right;
+
+            Vector3 leftBoundary = Quaternion.Euler(0, 0, fieldOfView / 2f) * forward;
+            Vector3 rightBoundary = Quaternion.Euler(0, 0, -fieldOfView / 2f) * forward;
+
+            Gizmos.DrawLine(transform.position, transform.position + leftBoundary * detectionRange);
+            Gizmos.DrawLine(transform.position, transform.position + rightBoundary * detectionRange);
+        }
     }
 }

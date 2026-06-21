@@ -204,3 +204,9 @@ MonoBehaviour:
   moveSpeed: 3.5
   detectionRange: 6
   attackRange: 0.8
+  useFOV: 1
+  fieldOfView: 75
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  showFOVVisuals: 1
