@@ -12,29 +12,57 @@ public class PlayerMovement : MonoBehaviour
     public float mountedSlippiness = 0.05f; 
     public float dismountedSlippiness = 0.4f; 
 
+    [Header("Aiming Settings")]
+    public float rotationOffset = 0f; // <--- UBAH NILAI INI DI INSPECTOR JIKA KARAKTER MASIH MIRING
+
     [Header("State")]
     public bool isMounted = true; 
     public bool isSharpening = false;
 
     private Rigidbody2D rb;
+    private Animator anim; 
     private Vector2 movementInput;
     private Vector2 currentVelocity;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>(); 
+        
         rb.gravityScale = 0f;
         SetMovementState(isMounted);
     }
 
     void Update()
     {
+        // 1. Input Gerak
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
         if (movementInput.magnitude > 1)
         {
             movementInput.Normalize();
+        }
+
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", movementInput.magnitude);
+        }
+
+        // 2. Logika Rotasi mengikuti Cursor
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 lookDir = mousePosition - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+
+        // Menerapkan rotasi dengan offset agar sprite tegak lurus
+        transform.rotation = Quaternion.Euler(0f, 0f, angle + rotationOffset);
+
+        if (Input.GetMouseButtonDown(0)) // 0 = Klik Kiri Mouse
+        {
+            if (anim != null)
+            {
+                anim.SetTrigger("Attack");
+            }
         }
     }
 
@@ -61,13 +89,11 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed = mountedSpeed;
             activeSlippiness = mountedSlippiness; 
-            Debug.Log("Mode: Mounted (Naik Son) - Cepat & Licin!");
         }
         else
         {
             currentSpeed = dismountedSpeed;
             activeSlippiness = dismountedSlippiness; 
-            Debug.Log("Mode: Dismounted (Jalan Kaki) - Lambat & Presisi!");
         }
     }
 }
