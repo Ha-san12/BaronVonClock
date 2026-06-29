@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -25,6 +26,10 @@ public class EnemyAI : MonoBehaviour
     private PlayerHealth playerHealth;
     private Rigidbody2D rb;
 
+    private Animator anim;
+
+    private bool hasTriggeredKaget = false;
+
     void Start()
     {
         GameObject player = GameObject.Find("Player_Baron");
@@ -42,6 +47,8 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f; 
         rb.freezeRotation = true; 
+
+        anim = GetComponent<Animator>();
 
         patrolTimer = changeDirectionTime;
         PickNewPatrolDirection();
@@ -62,7 +69,7 @@ public class EnemyAI : MonoBehaviour
             // 2. Cek sudut pandang (FOV)
             if (useFOV)
             {
-                Vector2 enemyForward = transform.right; 
+                Vector2 enemyForward = -transform.up; 
                 Vector2 dirToPlayer = ((Vector2)playerTransform.position - (Vector2)transform.position).normalized;
                 float angleToPlayer = Vector2.Angle(enemyForward, dirToPlayer);
 
@@ -87,6 +94,12 @@ public class EnemyAI : MonoBehaviour
         {
             patrolTimer = 0f; 
 
+            if (!hasTriggeredKaget)
+            {
+                if (anim != null) anim.SetTrigger("isTriggered");
+                hasTriggeredKaget = true;
+            }
+
             if (distanceToPlayer <= attackRange)
             {
                 AttackPlayer();
@@ -98,6 +111,11 @@ public class EnemyAI : MonoBehaviour
         }
         else 
         {
+            if (hasTriggeredKaget)
+            {
+                hasTriggeredKaget = false;
+            }
+
             if (canPatrol)
             {
                 PatrolAround();
@@ -114,13 +132,18 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction = ((Vector2)playerTransform.position - (Vector2)transform.position).normalized;
         rb.linearVelocity = direction * moveSpeed;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        // if (anim != null) anim.SetBool("isAttacking", false);
     }
 
     void AttackPlayer()
     {
         rb.linearVelocity = Vector2.zero;
+
+        if (anim != null) anim.SetTrigger("isAttacking");
+
         if (playerHealth != null)
         {
             playerHealth.TakeDamage();
@@ -141,10 +164,12 @@ public class EnemyAI : MonoBehaviour
 
         if (patrolDirection != Vector2.zero)
         {
-            float angle = Mathf.Atan2(patrolDirection.y, patrolDirection.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(patrolDirection.y, patrolDirection.x) * Mathf.Rad2Deg + 90f;
             Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 5f);
         }
+
+        if (anim != null) anim.SetBool("isAttacking", false);
     }
 
     void PickNewPatrolDirection()
@@ -180,7 +205,7 @@ public class EnemyAI : MonoBehaviour
         if (useFOV && showFOVVisuals)
         {
             Gizmos.color = Color.cyan;
-            Vector3 forward = transform.right;
+            Vector3 forward = -transform.up;
 
             Vector3 leftBoundary = Quaternion.Euler(0, 0, fieldOfView / 2f) * forward;
             Vector3 rightBoundary = Quaternion.Euler(0, 0, -fieldOfView / 2f) * forward;

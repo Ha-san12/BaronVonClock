@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: b345ea688ecddc148a8d9e22d53d98e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5792346763864494499
+    second: CV mengenai target_0
+  - first:
+      213: 940297616985111118
+    second: CV mengenai target_1
+  - first:
+      213: -2710372912143973807
+    second: CV mengenai target_2
+  - first:
+      213: -2594207569496223264
+    second: CV mengenai target_3
+  - first:
+      213: 9184548692436676106
+    second: CV mengenai target_4
+  - first:
+      213: 7512522808955319872
+    second: CV mengenai target_5
+  - first:
+      213: -4514752746903716723
+    second: CV mengenai target_6
+  - first:
+      213: -8650903457216821433
+    second: CV mengenai target_7
+  - first:
+      213: -8111653423130425667
+    second: CV mengenai target_8
+  - first:
+      213: 1716876896272366604
+    second: CV mengenai target_9
+  - first:
+      213: 7686062466251050598
+    second: CV mengenai target_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CV mengenai target_0
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1625
+        width: 102
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1d60c41bc826050800000000000000
+      internalID: 5792346763864494499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_1
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 376
+        width: 1466
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a3b8363bb9c0d00800000000000000
+      internalID: 940297616985111118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_2
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1513
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15241d25232d26ad0800000000000000
+      internalID: -2710372912143973807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1421
+        width: 158
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e15c82d5f58ffbd0800000000000000
+      internalID: -2594207569496223264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_4
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 983
+        width: 166
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e67fabf52167f70800000000000000
+      internalID: 9184548692436676106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_5
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1465
+        width: 74
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0463dc211b7d14860800000000000000
+      internalID: 7512522808955319872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1096
+        width: 162
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cb5100c406851c0800000000000000
+      internalID: -4514752746903716723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 919
+        width: 150
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747846ed321d1f780800000000000000
+      internalID: -8650903457216821433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_8
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 903
+        width: 74
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6ca35603e9d6f80800000000000000
+      internalID: -8111653423130425667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 470
+        width: 104
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cb365d07293d710800000000000000
+      internalID: 1716876896272366604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CV mengenai target_10
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 481
+        width: 55
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e4b5e27116aaa60800000000000000
+      internalID: 7686062466251050598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CV mengenai target_0: 5792346763864494499
+      CV mengenai target_1: 940297616985111118
+      CV mengenai target_10: 7686062466251050598
+      CV mengenai target_2: -2710372912143973807
+      CV mengenai target_3: -2594207569496223264
+      CV mengenai target_4: 9184548692436676106
+      CV mengenai target_5: 7512522808955319872
+      CV mengenai target_6: -4514752746903716723
+      CV mengenai target_7: -8650903457216821433
+      CV mengenai target_8: -8111653423130425667
+      CV mengenai target_9: 1716876896272366604
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
