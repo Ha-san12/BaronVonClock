@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 165739afbebb5fd4a97822d7ec8cbe81
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4339007180518014761
+    second: Bad Job Menyerang_0
+  - first:
+      213: 849976021897618636
+    second: Bad Job Menyerang_1
+  - first:
+      213: -8739267437657788817
+    second: Bad Job Menyerang_2
+  - first:
+      213: 6519666044124764797
+    second: Bad Job Menyerang_3
+  - first:
+      213: -8812894956014033872
+    second: Bad Job Menyerang_4
+  - first:
+      213: -1437653756615305124
+    second: Bad Job Menyerang_5
+  - first:
+      213: 6675339772743249679
+    second: Bad Job Menyerang_6
+  - first:
+      213: 5922725674130302279
+    second: Bad Job Menyerang_7
+  - first:
+      213: 4552795973535366502
+    second: Bad Job Menyerang_8
+  - first:
+      213: -700707441068075131
+    second: Bad Job Menyerang_9
+  - first:
+      213: -906631456260031847
+    second: Bad Job Menyerang_10
+  - first:
+      213: 1403908928984877954
+    second: Bad Job Menyerang_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bad Job Menyerang_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 881
+        width: 1400
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0ca5755ffb8c3c0800000000000000
+      internalID: -4339007180518014761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_1
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1331
+        width: 97
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4aec440b8bbcb00800000000000000
+      internalID: 849976021897618636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_2
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1708
+        width: 58
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ee44d6192e7b680800000000000000
+      internalID: -8739267437657788817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_3
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 800
+        width: 142
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a9b3679b18a7a50800000000000000
+      internalID: 6519666044124764797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_4
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1421
+        width: 51
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034a3ffeabe42b580800000000000000
+      internalID: -8812894956014033872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1369
+        width: 572
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5850fe768d6c0ce0800000000000000
+      internalID: -1437653756615305124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_6
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 189
+        width: 169
+        height: 981
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0fe565e72293ac50800000000000000
+      internalID: 6675339772743249679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_7
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 67
+        width: 141
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7456f94ee9fb13250800000000000000
+      internalID: 5922725674130302279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_8
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 224
+        width: 102
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d7761f0d7ce2f30800000000000000
+      internalID: 4552795973535366502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_9
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 921
+        width: 86
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5871aab7b469646f0800000000000000
+      internalID: -700707441068075131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_10
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 554
+        width: 263
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99afc6b7e7ffa63f0800000000000000
+      internalID: -906631456260031847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bad Job Menyerang_11
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 420
+        width: 88
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b84219bbfab7310800000000000000
+      internalID: 1403908928984877954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bad Job Menyerang_0: -4339007180518014761
+      Bad Job Menyerang_1: 849976021897618636
+      Bad Job Menyerang_10: -906631456260031847
+      Bad Job Menyerang_11: 1403908928984877954
+      Bad Job Menyerang_2: -8739267437657788817
+      Bad Job Menyerang_3: 6519666044124764797
+      Bad Job Menyerang_4: -8812894956014033872
+      Bad Job Menyerang_5: -1437653756615305124
+      Bad Job Menyerang_6: 6675339772743249679
+      Bad Job Menyerang_7: 5922725674130302279
+      Bad Job Menyerang_8: 4552795973535366502
+      Bad Job Menyerang_9: -700707441068075131
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

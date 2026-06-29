@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 2e99f27b608398c4f8a35df490f834be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1089778948781154090
+    second: The Big Bad Job Kalem_0
+  - first:
+      213: -2254627805362485194
+    second: The Big Bad Job Kalem_1
+  - first:
+      213: -6733179803779933224
+    second: The Big Bad Job Kalem_2
+  - first:
+      213: -5245835588982157683
+    second: The Big Bad Job Kalem_3
+  - first:
+      213: 1490043524985655110
+    second: The Big Bad Job Kalem_4
+  - first:
+      213: 6949582372285187595
+    second: The Big Bad Job Kalem_5
+  - first:
+      213: -219935341954755129
+    second: The Big Bad Job Kalem_6
+  - first:
+      213: 4660248648731960813
+    second: The Big Bad Job Kalem_7
+  - first:
+      213: -6265407778544344580
+    second: The Big Bad Job Kalem_8
+  - first:
+      213: -8734857556976804635
+    second: The Big Bad Job Kalem_9
+  - first:
+      213: 3099704832571154322
+    second: The Big Bad Job Kalem_10
+  - first:
+      213: -2074138436879360214
+    second: The Big Bad Job Kalem_11
+  - first:
+      213: 3553458241845539648
+    second: The Big Bad Job Kalem_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_0
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 150
+        width: 932
+        height: 1895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0633ae1d350e0f0800000000000000
+      internalID: -1089778948781154090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_1
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 2010
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63886a0e4f3f5b0e0800000000000000
+      internalID: -2254627805362485194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1771
+        width: 61
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbdcd274a0fe82a0800000000000000
+      internalID: -6733179803779933224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1534
+        width: 653
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ecd90535c0337b0800000000000000
+      internalID: -5245835588982157683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 887
+        width: 651
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f04aef0b2bda410800000000000000
+      internalID: 1490043524985655110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_5
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 1496
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06006dd850e17060800000000000000
+      internalID: 6949582372285187595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_6
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1509
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c59b35c8f1a2fcf0800000000000000
+      internalID: -219935341954755129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_7
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1514
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5a9a874778ca040800000000000000
+      internalID: 4660248648731960813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_8
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 1518
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf125ea22dccc09a0800000000000000
+      internalID: -6265407778544344580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_9
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 1345
+        width: 60
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecd2c8c45d87c680800000000000000
+      internalID: -8734857556976804635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_10
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1352
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f17fd4f1d540b20800000000000000
+      internalID: 3099704832571154322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_11
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1357
+        width: 21
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f52d6b41e2733e0800000000000000
+      internalID: -2074138436879360214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Big Bad Job Kalem_12
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1357
+        width: 87
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0433365a17b605130800000000000000
+      internalID: 3553458241845539648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      The Big Bad Job Kalem_0: -1089778948781154090
+      The Big Bad Job Kalem_1: -2254627805362485194
+      The Big Bad Job Kalem_10: 3099704832571154322
+      The Big Bad Job Kalem_11: -2074138436879360214
+      The Big Bad Job Kalem_12: 3553458241845539648
+      The Big Bad Job Kalem_2: -6733179803779933224
+      The Big Bad Job Kalem_3: -5245835588982157683
+      The Big Bad Job Kalem_4: 1490043524985655110
+      The Big Bad Job Kalem_5: 6949582372285187595
+      The Big Bad Job Kalem_6: -219935341954755129
+      The Big Bad Job Kalem_7: 4660248648731960813
+      The Big Bad Job Kalem_8: -6265407778544344580
+      The Big Bad Job Kalem_9: -8734857556976804635
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
