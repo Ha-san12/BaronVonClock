@@ -1704,8 +1704,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -21}
-  m_SizeDelta: {x: 641.897, y: 335.314}
+  m_AnchoredPosition: {x: 41, y: -19}
+  m_SizeDelta: {x: 392.9673, y: 205.2782}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &452194865
 MonoBehaviour:
@@ -1720,14 +1720,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31257385, g: 0.5396226, b: 0.33544126, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d76349bddd39c54aa581d794dd74d86, type: 3}
+  m_Sprite: {fileID: -1119156793454074880, guid: 1b38b61b7d7cc9b49bcbaa11a91d8ce3, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3564,7 +3564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f80897eb9c4454280a2ff66dfb3fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  weaponSharpnessBar: {fileID: 452194865}
+  weaponSharpnessImage: {fileID: 452194865}
+  swordSprites:
+  - {fileID: -3881326503751455387, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
+  - {fileID: -7866839526406225177, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
+  - {fileID: -6634342729688813788, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
+  - {fileID: 7030063987167893954, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
+  - {fileID: -7936171640731265688, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
   sonMeterImage: {fileID: 68283290}
   orbText: {fileID: 567153853}
 --- !u!4 &944074940
