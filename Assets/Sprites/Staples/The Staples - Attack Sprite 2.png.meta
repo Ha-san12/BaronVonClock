@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 37557f38263554c4d8b07bd41acb73c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8170269725580755279
+    second: The Staples - Attack Sprite 2_0
+  - first:
+      213: -2839307421847691957
+    second: The Staples - Attack Sprite 2_1
+  - first:
+      213: -5243859154360860771
+    second: The Staples - Attack Sprite 2_2
+  - first:
+      213: 6464546011270205003
+    second: The Staples - Attack Sprite 2_3
+  - first:
+      213: 205594735404281330
+    second: The Staples - Attack Sprite 2_4
+  - first:
+      213: 3205226474305424264
+    second: The Staples - Attack Sprite 2_5
+  - first:
+      213: -4115812603558027308
+    second: The Staples - Attack Sprite 2_6
+  - first:
+      213: -8544124276820541550
+    second: The Staples - Attack Sprite 2_7
+  - first:
+      213: -8530593065643915703
+    second: The Staples - Attack Sprite 2_8
+  - first:
+      213: 6861444747992888562
+    second: The Staples - Attack Sprite 2_9
+  - first:
+      213: 6229035133315862825
+    second: The Staples - Attack Sprite 2_10
+  - first:
+      213: 4702471116756146275
+    second: The Staples - Attack Sprite 2_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_0
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 22096
+        width: 5080
+        height: 6027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f418e580701a26170800000000000000
+      internalID: 8170269725580755279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_1
+      rect:
+        serializedVersion: 2
+        x: 6094
+        y: 26581
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d53a071f0c898d0800000000000000
+      internalID: -2839307421847691957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_2
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 15379
+        width: 5159
+        height: 5794
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ff32cd1e11a37b0800000000000000
+      internalID: -5243859154360860771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_3
+      rect:
+        serializedVersion: 2
+        x: 4111
+        y: 21172
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ecdebb85ea6b950800000000000000
+      internalID: 6464546011270205003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_4
+      rect:
+        serializedVersion: 2
+        x: 4198
+        y: 21153
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd6673925b6ad200800000000000000
+      internalID: 205594735404281330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_5
+      rect:
+        serializedVersion: 2
+        x: 6306
+        y: 19429
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b07a11f704b7c20800000000000000
+      internalID: 3205226474305424264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_6
+      rect:
+        serializedVersion: 2
+        x: 6323
+        y: 18828
+        width: 8
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df19da5e32b1e6c0800000000000000
+      internalID: -4115812603558027308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_7
+      rect:
+        serializedVersion: 2
+        x: 6307
+        y: 18261
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ff15b2d3c2d6980800000000000000
+      internalID: -8544124276820541550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_8
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 7962
+        width: 5375
+        height: 6423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94642e6cdce3d9980800000000000000
+      internalID: -8530593065643915703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_9
+      rect:
+        serializedVersion: 2
+        x: 4107
+        y: 14384
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4f51215afb83f50800000000000000
+      internalID: 6861444747992888562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_10
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 14385
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92158be637af17650800000000000000
+      internalID: 6229035133315862825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Staples - Attack Sprite 2_11
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1505
+        width: 5080
+        height: 6043
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368d8c0e098824140800000000000000
+      internalID: 4702471116756146275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      The Staples - Attack Sprite 2_0: 8170269725580755279
+      The Staples - Attack Sprite 2_1: -2839307421847691957
+      The Staples - Attack Sprite 2_10: 6229035133315862825
+      The Staples - Attack Sprite 2_11: 4702471116756146275
+      The Staples - Attack Sprite 2_2: -5243859154360860771
+      The Staples - Attack Sprite 2_3: 6464546011270205003
+      The Staples - Attack Sprite 2_4: 205594735404281330
+      The Staples - Attack Sprite 2_5: 3205226474305424264
+      The Staples - Attack Sprite 2_6: -4115812603558027308
+      The Staples - Attack Sprite 2_7: -8544124276820541550
+      The Staples - Attack Sprite 2_8: -8530593065643915703
+      The Staples - Attack Sprite 2_9: 6861444747992888562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
