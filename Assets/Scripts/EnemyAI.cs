@@ -30,6 +30,8 @@ public class EnemyAI : MonoBehaviour
 
     private bool hasTriggeredKaget = false;
 
+    
+
     void Start()
     {
         GameObject player = GameObject.Find("Player_Baron");
@@ -197,6 +199,8 @@ public class EnemyAI : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.yellow;
