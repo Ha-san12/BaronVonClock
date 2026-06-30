@@ -39,6 +39,7 @@ public class PolishedRangedEnemy : MonoBehaviour
     private Animator anim;
     private float nextFireTime;
     private bool hasTriggeredKaget = false; //[cite: 3]
+    
 
     void Start()
     {

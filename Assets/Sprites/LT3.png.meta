@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 9f36b6bf024eeb74589d5fc1245d88ff
+guid: 1fc2054cde66ddf489aeb0760e22c8f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4102391066185386305
-    second: Bad Job Idle_Walk 1 Kalem_0
-  - first:
-      213: 7983577984198455534
-    second: Bad Job Idle_Walk 1 Kalem_1
-  - first:
-      213: -8598504024118494716
-    second: Bad Job Idle_Walk 1 Kalem_2
-  - first:
-      213: -5504764508959787931
-    second: Bad Job Idle_Walk 1 Kalem_3
+      213: 8211187191400299275
+    second: LT3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bad Job Idle_Walk 1 Kalem_0
+      name: LT3_0
       rect:
         serializedVersion: 2
-        x: 351
-        y: 697
-        width: 1457
-        height: 910
+        x: 0
+        y: 0
+        width: 4002
+        height: 1651
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14947b570fe9ee830800000000000000
-      internalID: 4102391066185386305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bad Job Idle_Walk 1 Kalem_1
-      rect:
-        serializedVersion: 2
-        x: 519
-        y: 653
-        width: 214
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee037c8b0ed5bce60800000000000000
-      internalID: 7983577984198455534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bad Job Idle_Walk 1 Kalem_2
-      rect:
-        serializedVersion: 2
-        x: 1606
-        y: 1049
-        width: 269
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40a76aa952afba880800000000000000
-      internalID: -8598504024118494716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bad Job Idle_Walk 1 Kalem_3
-      rect:
-        serializedVersion: 2
-        x: 1497
-        y: 561
-        width: 170
-        height: 484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 564364738d52b93b0800000000000000
-      internalID: -5504764508959787931
+      spriteID: b0bf6afee3ff3f170800000000000000
+      internalID: 8211187191400299275
       vertices: []
       indices: 
       edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bad Job Idle_Walk 1 Kalem_0: 4102391066185386305
-      Bad Job Idle_Walk 1 Kalem_1: 7983577984198455534
-      Bad Job Idle_Walk 1 Kalem_2: -8598504024118494716
-      Bad Job Idle_Walk 1 Kalem_3: -5504764508959787931
+      LT3_0: 8211187191400299275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
