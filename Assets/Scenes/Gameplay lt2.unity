@@ -4974,6 +4974,89 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1221537821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1221537823}
+  - component: {fileID: 1221537822}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1221537822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221537821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a07a28c279391b4ebc4d3b026c7efa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  daftarSFX:
+  - namaSFX: paperwork_jalan
+    fileAudio: {fileID: 8300000, guid: fbb8b40fe71e50b47a4d5a68a2a1990e, type: 3}
+  - namaSFX: cvman_jalan
+    fileAudio: {fileID: 8300000, guid: 28fc7c86dfec7cd4b8ece0aa2bd7609d, type: 3}
+  - namaSFX: cvman_nengok
+    fileAudio: {fileID: 8300000, guid: a3290fa3c9c8eaf41a8106c6422b28f3, type: 3}
+  - namaSFX: cvman_attack
+    fileAudio: {fileID: 8300000, guid: 610832eef8fbb774bad566c849110403, type: 3}
+  - namaSFX: son_jalan
+    fileAudio: {fileID: 8300000, guid: 0099d588071e8304fb9a510d5b349623, type: 3}
+  - namaSFX: naik_son
+    fileAudio: {fileID: 8300000, guid: 54536eaecb961f44683257fe8b9b5f68, type: 3}
+  - namaSFX: bbj_death
+    fileAudio: {fileID: 8300000, guid: 19f77bb9a2662de41afef181444fd08a, type: 3}
+  - namaSFX: bbj_idle
+    fileAudio: {fileID: 8300000, guid: 5aec968c8e9bb9b47bf3390c8479a0a8, type: 3}
+  - namaSFX: bbj_attack
+    fileAudio: {fileID: 8300000, guid: b3fa2a80c57fc78459be4c92052f55d8, type: 3}
+  - namaSFX: footstep
+    fileAudio: {fileID: 8300000, guid: 2df6dce919730af48aaa5f91ea7d4f62, type: 3}
+  - namaSFX: duckduckboom
+    fileAudio: {fileID: 8300000, guid: 6410b8d39ee5e0b45b9edba03f23d1db, type: 3}
+  - namaSFX: staples_attack
+    fileAudio: {fileID: 8300000, guid: b704637d42338be438c98ffbecc44b09, type: 3}
+  - namaSFX: child_s_break
+    fileAudio: {fileID: 8300000, guid: c55e8c01e142e1c48b6f22b0c3aad4af, type: 3}
+  - namaSFX: child_s
+    fileAudio: {fileID: 8300000, guid: 351ef66f448de304b9694ef22631443c, type: 3}
+  - namaSFX: balloon_sword_break
+    fileAudio: {fileID: 8300000, guid: 25b589a6a4a909145b1d60f82edf499b, type: 3}
+  - namaSFX: balloonsword
+    fileAudio: {fileID: 8300000, guid: f8015d44e88373547b1c146bc19f6dc4, type: 3}
+  - namaSFX: son_ngacir
+    fileAudio: {fileID: 8300000, guid: b3be5b0b2652b554297f9f9099179464, type: 3}
+  - namaSFX: baron_death
+    fileAudio: {fileID: 8300000, guid: 006588fda38affe43bf0fc6d87ab44fa, type: 3}
+  - namaSFX: select
+    fileAudio: {fileID: 8300000, guid: 25003663a61a7534e87ea08079fbbb5c, type: 3}
+--- !u!4 &1221537823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221537821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.61, y: -1.70208, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1242214989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9082,3 +9165,4 @@ SceneRoots:
   - {fileID: 2075662903}
   - {fileID: 1760309657}
   - {fileID: 154815419}
+  - {fileID: 1221537823}

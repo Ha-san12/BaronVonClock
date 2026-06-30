@@ -30,7 +30,9 @@ public class EnemyAI : MonoBehaviour
 
     private bool hasTriggeredKaget = false;
 
-    
+    [Header("Audio Settings")]
+    [SerializeField] private string namaSFXAttack;
+    [SerializeField] private string namaSFXJalan;
 
     void Start()
     {
