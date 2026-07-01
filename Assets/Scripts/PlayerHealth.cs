@@ -1,20 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Son Cooldown Settings")]
-    public float sonCooldownDuration = 5f; // Durasi ayam kabur (detik)
+    public float sonCooldownDuration = 5f;
     public float cooldownTimer = 0f;
     public bool isCooldownActive = false;
 
     private PlayerMovement playerMovement;
+    private Animator anim;
+    private PlayerAttack playerAttack;
+    private bool isDead = false;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        anim = GetComponent<Animator>();
+        playerAttack = GetComponent<PlayerAttack>();
         
-        // PASTIKAN pas game mulai, Baron otomatis naik ayam sesuai GDD
         if (playerMovement != null)
         {
             playerMovement.SetMovementState(true);
@@ -23,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        // Jalankan timer jika Son sedang dalam masa cooldown
         if (isCooldownActive)
         {
             cooldownTimer -= Time.deltaTime;
@@ -34,24 +38,19 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Fungsi utama saat Baron ditabrak musuh
     public void TakeDamage()
     {
+        if (isDead) return; // Jangan damage kalau sudah mati
+
         // KONDISI 1: Jika sedang naik ayam (Mounted)
         if (playerMovement.isMounted && !isCooldownActive)
         {
-            Debug.Log("EVENT: Lunch Break Over! Son terkena hit dan kabur!");
-            
-            // Turunkan Baron dari ayam (Ubah pergerakan jadi lambat & kesat)
             playerMovement.SetMovementState(false);
-            
-            // Mulai masa cooldown ayam
             StartSonCooldown();
         }
-        // KONDISI 2: Jika sedang jalan kaki (Dismounted) dan cooldown masih berjalan
+        // KONDISI 2: Jika sedang jalan kaki (Dismounted)[cite: 2]
         else if (!playerMovement.isMounted && isCooldownActive)
         {
-            // Sumpah ini pelindung biar ga double-hit instan dalam 1 frame semenjak ayam kabur
             if (cooldownTimer < (sonCooldownDuration - 0.5f)) 
             {
                 TriggerPlayerDeath();
@@ -68,17 +67,40 @@ public class PlayerHealth : MonoBehaviour
     void EndSonCooldown()
     {
         isCooldownActive = false;
-        // Kembalikan otomatis ke mode naik ayam setelah cooldown selesai
         playerMovement.SetMovementState(true);
-        Debug.Log("Son telah kembali! Baron otomatis menunggangi Son.");
     }
 
+    // --- LOGIKA KEMATIAN BARU ---
     void TriggerPlayerDeath()
     {
-        Debug.Log("EVENT: FIRED! Baron mati terkena hit saat jalan kaki!");
+        if (isDead) return;
+        isDead = true;
+
+        Debug.Log("EVENT: Baron mati!");
         
-        // Mengulang level secara instan
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        // 1. Pause Waktu Game
+        Time.timeScale = 0f;
+
+        // 2. Mainkan animasi mati sesuai senjata yang dipegang
+        if (anim != null && playerAttack != null)
+        {
+            if (playerAttack.currentWeapon == PlayerAttack.WeaponType.ToySword)
+                anim.SetTrigger("DieToy");
+            else
+                anim.SetTrigger("DieBalloon");
+        }
+
+        // 3. Panggil penghitung mundur untuk memunculkan panel Game Over
+        StartCoroutine(TungguAnimasiMatiSelesai());
+    }
+
+    IEnumerator TungguAnimasiMatiSelesai()
+    {
+        // Tunggu animasi selesai meski game di-pause (pake Realtime)
+        yield return new WaitForSecondsRealtime(1.5f); // Sesuaikan dengan durasi animasi mati
+
+        // Cari UIManager dan munculkan panel Game Over
+        UIManager ui = FindObjectOfType<UIManager>();
+        if (ui != null) ui.MunculkanGameOver();
     }
 }
