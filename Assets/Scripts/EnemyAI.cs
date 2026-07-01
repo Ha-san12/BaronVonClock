@@ -1,4 +1,5 @@
-using UnityEditor.Animations;
+using UnityEditor;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -27,6 +28,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
 
     private Animator anim;
+    private bool sudahMati = false;
 
     private bool hasTriggeredKaget = false;
 
@@ -58,6 +60,42 @@ public class EnemyAI : MonoBehaviour
         PickNewPatrolDirection();
     }
 
+    public void Die()
+{
+    if (sudahMati) return;
+    sudahMati = true;
+
+    // 1. Matikan fungsi AI & fisikanya biar gak jadi zombi
+    this.enabled = false;
+    rb.linearVelocity = Vector2.zero;
+    if (GetComponent<Collider2D>() != null) GetComponent<Collider2D>().enabled = false;
+
+    // 2. Taktik Darurat: Langsung bikin spritenya transparan/pucat biar kelihatan mati
+    SpriteRenderer sr = GetComponent<SpriteRenderer>();
+    if (sr != null) sr.color = new Color(1f, 1f, 1f, 0.3f); // Musuh jadi transparan
+
+    // 3. BYPASS LEVEL MANAGER: Langsung suruh ganti level dari sini!
+    GameObject managerObjek = GameObject.Find("LevelManager");
+    if (managerObjek != null)
+    {
+        managerObjek.GetComponent<LevelManager>().CekSisaMusuh();
+    }
+    else
+    {
+        // Kalau lu males bikin GameObject LevelManager, kita paksa pindah scene otomatis!
+        int nextSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    StartCoroutine(ProsesHancurMusuh());
+}
+
+    IEnumerator ProsesHancurMusuh()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
+    
     void FixedUpdate()
     {
         if (playerTransform == null) return;
