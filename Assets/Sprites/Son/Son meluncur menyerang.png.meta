@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 846d339bd4487bb4c957aa261469d2d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3693014421917447214
+    second: Son meluncur menyerang_0
+  - first:
+      213: -862716558076674923
+    second: Son meluncur menyerang_1
+  - first:
+      213: -6459646492468120896
+    second: Son meluncur menyerang_2
+  - first:
+      213: -2073952015384007048
+    second: Son meluncur menyerang_3
+  - first:
+      213: 2159547773063071656
+    second: Son meluncur menyerang_4
+  - first:
+      213: -5997170492257299301
+    second: Son meluncur menyerang_5
+  - first:
+      213: -5350809633100820938
+    second: Son meluncur menyerang_6
+  - first:
+      213: 3730020549771730881
+    second: Son meluncur menyerang_7
+  - first:
+      213: -8040502899614651722
+    second: Son meluncur menyerang_8
+  - first:
+      213: 1216960243923409562
+    second: Son meluncur menyerang_9
+  - first:
+      213: -2914808347891083004
+    second: Son meluncur menyerang_10
+  - first:
+      213: -4291027788728563955
+    second: Son meluncur menyerang_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Son meluncur menyerang_0
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 320
+        width: 636
+        height: 1681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db473f13f6cfbcc0800000000000000
+      internalID: -3693014421917447214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_1
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1936
+        width: 202
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cfdfd7cd30704f0800000000000000
+      internalID: -862716558076674923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_2
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1030
+        width: 161
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2f6d16db9ba56a0800000000000000
+      internalID: -6459646492468120896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_3
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1042
+        width: 106
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ea4d951a7d733e0800000000000000
+      internalID: -2073952015384007048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_4
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 408
+        width: 48
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a709e0024148fd10800000000000000
+      internalID: 2159547773063071656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 111
+        width: 46
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b949c8f2635c5cca0800000000000000
+      internalID: -5997170492257299301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_6
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 84
+        width: 24
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e894e0dfa1eb5b0800000000000000
+      internalID: -5350809633100820938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_7
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 122
+        width: 94
+        height: 805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf1d027de1b3c330800000000000000
+      internalID: 3730020549771730881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_8
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 49
+        width: 54
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba68f496356a6090800000000000000
+      internalID: -8040502899614651722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_9
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 95
+        width: 41
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ad3d4e4e283e010800000000000000
+      internalID: 1216960243923409562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_10
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 19
+        width: 25
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409db9b30458c87d0800000000000000
+      internalID: -2914808347891083004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Son meluncur menyerang_11
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 83
+        width: 20
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07018306f43374c0800000000000000
+      internalID: -4291027788728563955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Son meluncur menyerang_0: -3693014421917447214
+      Son meluncur menyerang_1: -862716558076674923
+      Son meluncur menyerang_10: -2914808347891083004
+      Son meluncur menyerang_11: -4291027788728563955
+      Son meluncur menyerang_2: -6459646492468120896
+      Son meluncur menyerang_3: -2073952015384007048
+      Son meluncur menyerang_4: 2159547773063071656
+      Son meluncur menyerang_5: -5997170492257299301
+      Son meluncur menyerang_6: -5350809633100820938
+      Son meluncur menyerang_7: 3730020549771730881
+      Son meluncur menyerang_8: -8040502899614651722
+      Son meluncur menyerang_9: 1216960243923409562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
