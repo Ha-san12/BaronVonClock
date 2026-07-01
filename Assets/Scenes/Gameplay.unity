@@ -5378,14 +5378,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   weaponSharpnessImage: {fileID: 1561480418}
-  swordSprites:
-  - {fileID: -3881326503751455387, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
-  - {fileID: -7866839526406225177, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
-  - {fileID: -6634342729688813788, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
-  - {fileID: 7030063987167893954, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
-  - {fileID: -7936171640731265688, guid: 8c260f0c8f0fdab43be8e6eda8834307, type: 3}
+  toySwordSprites: []
+  balloonSwordSprites: []
   sonMeterImage: {fileID: 68283290}
   orbText: {fileID: 567153853}
+  gameOverPanel: {fileID: 0}
 --- !u!4 &944074940
 Transform:
   m_ObjectHideFlags: 0
@@ -7651,6 +7648,7 @@ GameObject:
   - component: {fileID: 1515837748}
   - component: {fileID: 1515837750}
   - component: {fileID: 1515837749}
+  - component: {fileID: 1515837751}
   m_Layer: 0
   m_Name: Player_Baron
   m_TagString: Untagged
@@ -7749,16 +7747,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10162f169ef1d24aad21f809f97b887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  maxSharpness: 100
-  currentSharpness: 100
-  sharpnessLossPerHit: 20
-  sharpenOrbCost: 2
-  attackRange: 1
+  currentWeapon: 0
+  toyAttackRange: 1.2
+  toyMaxSharpness: 100
+  toyLossPerHit: 6.6
+  toyCurrentSharpness: 100
+  balloonAttackRange: 2.5
+  balloonMaxSharpness: 100
+  balloonLossPerHit: 34
+  balloonCurrentSharpness: 100
   attackPoint: {fileID: 1102197085}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
   currentMemoryOrbs: 5
+  sharpenOrbCost: 2
   sharpenDuration: 4
 --- !u!61 &1515837748
 BoxCollider2D:
@@ -7887,6 +7890,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1515837751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515837741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a8e69ac932367499245c2eeee16b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MountSystem
+  playerAnim: {fileID: 1515837750}
+  mountSpeed: 8
 --- !u!1 &1525544398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8685,7 +8702,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: ea1934a32726f2740800529adc73e30b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

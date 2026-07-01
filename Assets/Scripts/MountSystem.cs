@@ -20,14 +20,14 @@ public class MountSystem : MonoBehaviour
         // kecepatanAsli = playerMove.speed; 
     }
 
-    void Update()
-    {
-        // Kalau lu di dekat ayam, pencet E, dan belum naik
-        if (bisaNaik && Input.GetKeyDown(KeyCode.E) && !lagiNaikSon)
+        void Update()
         {
-            ProsesNaikSon();
+            // Kalau lu di dekat ayam, pencet E, dan belum naik
+            if (bisaNaik && Input.GetKeyDown(KeyCode.E) && !lagiNaikSon)
+            {
+                ProsesNaikSon();
+            }
         }
-    }
 
     void ProsesNaikSon()
     {
@@ -40,7 +40,7 @@ public class MountSystem : MonoBehaviour
         }
 
         // 2. Mainkan SFX naik
-        AudioManager.instance.PlaySFX("naik son");
+        // AudioManager.instance.PlaySFX("naik son");
 
         // 3. Ubah animasi Baron ke wujud gabungan
         playerAnim.SetBool("isRiding", true);
